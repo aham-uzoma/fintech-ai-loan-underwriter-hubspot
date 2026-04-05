@@ -2,8 +2,6 @@
 
 An automated, AI-driven lending pipeline that integrates **HubSpot CRM**, **OpenAI (GPT-4o)**, and **GitHub Actions** to transform raw lead data into structured underwriting decisions in real-time.
 
----
-
 ## Overview
 
 In traditional fintech, manual underwriting is a bottleneck. This project solves that by creating an **autonomous Virtual Underwriter**. The system monitors HubSpot for new loan applications, uses AI to analyze creditworthiness, moves the deal to the appropriate pipeline stage, and triggers high-priority tasks for the sales team—all without human intervention.
@@ -16,8 +14,6 @@ In traditional fintech, manual underwriting is a bottleneck. This project solves
 - **Serverless Execution:** Runs 24/7 via GitHub Actions (Cron) with no hosting costs.
 - **Modular Architecture:** Clean Separation of Concerns (Services, Jobs, Config).
 
----
-
 ## System Architecture
 
 1.  **Trigger:** GitHub Actions wakes up every hour and executes the Node.js environment.
@@ -25,8 +21,6 @@ In traditional fintech, manual underwriting is a bottleneck. This project solves
 3.  **Analyze:** The `openaiService` sends lead data to GPT-4o with a strict fintech-underwriting prompt.
 4.  **Execute:** The `dealService` creates/updates deals and assigns an interest rate.
 5.  **Notify:** If the AI confidence score is >90%, a high-priority follow-up task is created for the team.
-
----
 
 ## Technical Setup
 
@@ -62,8 +56,6 @@ In traditional fintech, manual underwriting is a bottleneck. This project solves
     HUBSPOT_STAGE_CON=your_stage_id
     ```
 
----
-
 ## AI Logic & Prompt Engineering
 
 The system uses a **Chain of Thought** prompt to ensure the LLM acts as a Senior Underwriter. It enforces a strict JSON schema output for seamless integration:
@@ -75,6 +67,7 @@ The system uses a **Chain of Thought** prompt to ensure the LLM acts as a Senior
   "reasoning": "High credit score (750) and low debt-to-income ratio...",
   "confidence_score": 98
 }
+```
 
 ## Deployment (GitHub Actions)
 
@@ -95,4 +88,3 @@ Reduced Response Time: Leads are analyzed and categorized in seconds, not hours 
 Increased Accuracy: Eliminated human errors and ensured consistent risk assessment.
 
 Scalability: The startup can handle 10x the lead volume without increasing underwriting headcount.
-```
