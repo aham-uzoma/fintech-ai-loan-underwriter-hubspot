@@ -75,16 +75,14 @@ The project is fully automated. To set it up:
 
 Push the code to GitHub.
 
-Go to Settings > Secrets and variables > Actions.
-
-Add all variables from your .env as Repository Secrets.
-
-The pipeline will now run every hour or can be triggered manually via the Actions tab.
+- Go to Settings > Secrets and variables > Actions.
+- Add all variables from your .env as Repository Secrets.
+- The pipeline will now run every hour or can be triggered manually via the Actions tab.
 
 ## Business Impact
 
-Reduced Response Time: Leads are analyzed and categorized in seconds, not hours or days.
+**Reduced Response Time:** Leads are analyzed and categorized in seconds, not hours or days.
 
-Increased Accuracy: Eliminated human errors and ensured consistent risk assessment.
+**Increased Accuracy:** Eliminated human errors and ensured consistent risk assessment.
 
-Scalability: The startup can handle 10x the lead volume without increasing underwriting headcount.
+**Scalability:** The startup can handle 10x the lead volume without increasing underwriting headcount.
